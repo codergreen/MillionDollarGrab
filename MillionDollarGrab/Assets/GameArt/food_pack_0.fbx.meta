@@ -1,0 +1,111 @@
+fileFormatVersion: 2
+guid: d335dcc435c02a94e9bcb268c5d0435d
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Camera
+    100002: CheeseWedge
+    100004: CheeseWedge.001
+    100006: //RootNode
+    100008: Grapes
+    100010: Grapes.001
+    100012: Lamp
+    100014: Plane
+    100016: SplitTopBread
+    100018: SplitTopBread.001
+    100020: TurkeyLeg
+    100022: TurkeyLeg.001
+    400000: Camera
+    400002: CheeseWedge
+    400004: CheeseWedge.001
+    400006: //RootNode
+    400008: Grapes
+    400010: Grapes.001
+    400012: Lamp
+    400014: Plane
+    400016: SplitTopBread
+    400018: SplitTopBread.001
+    400020: TurkeyLeg
+    400022: TurkeyLeg.001
+    2300000: CheeseWedge
+    2300002: CheeseWedge.001
+    2300004: Grapes
+    2300006: Grapes.001
+    2300008: Plane
+    2300010: SplitTopBread
+    2300012: SplitTopBread.001
+    2300014: TurkeyLeg
+    2300016: TurkeyLeg.001
+    3300000: CheeseWedge
+    3300002: CheeseWedge.001
+    3300004: Grapes
+    3300006: Grapes.001
+    3300008: Plane
+    3300010: SplitTopBread
+    3300012: SplitTopBread.001
+    3300014: TurkeyLeg
+    3300016: TurkeyLeg.001
+    4300000: TurkeyLeg.001
+    4300002: CheeseWedge.001
+    4300004: SplitTopBread.001
+    4300006: Grapes.001
+    4300008: Plane
+    4300010: Grapes
+    4300012: SplitTopBread
+    4300014: CheeseWedge
+    4300016: TurkeyLeg
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

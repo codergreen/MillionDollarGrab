@@ -1,0 +1,128 @@
+fileFormatVersion: 2
+guid: 52835765b34476148880f81a071426f2
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Canape
+    100002: Canape_001
+    100004: Canape_002
+    100006: Canape_003
+    100008: Cube_018
+    100010: Cube_019
+    100012: Cube_020
+    100014: Cube_021
+    100016: Cube_022
+    100018: Cylinder_017
+    100020: Cylinder_049
+    100022: Cylinder_069
+    100024: //RootNode
+    100026: Poubelle
+    400000: Canape
+    400002: Canape_001
+    400004: Canape_002
+    400006: Canape_003
+    400008: Cube_018
+    400010: Cube_019
+    400012: Cube_020
+    400014: Cube_021
+    400016: Cube_022
+    400018: Cylinder_017
+    400020: Cylinder_049
+    400022: Cylinder_069
+    400024: //RootNode
+    400026: Poubelle
+    2300000: Canape
+    2300002: Canape_001
+    2300004: Canape_002
+    2300006: Canape_003
+    2300008: Cube_018
+    2300010: Cube_019
+    2300012: Cube_020
+    2300014: Cube_021
+    2300016: Cube_022
+    2300018: Cylinder_017
+    2300020: Cylinder_049
+    2300022: Cylinder_069
+    2300024: Poubelle
+    3300000: Canape
+    3300002: Canape_001
+    3300004: Canape_002
+    3300006: Canape_003
+    3300008: Cube_018
+    3300010: Cube_019
+    3300012: Cube_020
+    3300014: Cube_021
+    3300016: Cube_022
+    3300018: Cylinder_017
+    3300020: Cylinder_049
+    3300022: Cylinder_069
+    3300024: Poubelle
+    4300000: Canape_001
+    4300002: Canape_002
+    4300004: Canape_003
+    4300006: Canape
+    4300008: Cube_018
+    4300010: Cube_019
+    4300012: Cube_020
+    4300014: Cube_021
+    4300016: Cube_022
+    4300018: Cylinder_017
+    4300020: Cylinder_049
+    4300022: Cylinder_069
+    4300024: Poubelle
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
