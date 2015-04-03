@@ -1,8 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\GitHub\CommunityGame2014\Gates of Mansole\Assets\Scripts\Entity\Player.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\move.cs">
     <Files>
-      <File FileName="..\GitHub\CommunityGame2014\Gates of Mansole\Assets\Scripts\Entity\Player.cs" Line="69" Column="21" />
+      <File FileName="Assets\scripts\move.cs" Line="22" Column="71" />
+      <File FileName="Assets\scripts\Network\Using\ServerNetwork.cs" Line="18" Column="23" />
+      <File FileName="Assets\scripts\Network\Using\ServerClientSelect.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Network\Using\ClientNetwork.cs" Line="15" Column="18" />
+      <File FileName="Assets\scripts\non networked scripts\bomb.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\BlargID.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

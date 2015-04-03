@@ -46,11 +46,22 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\scripts\CustomSerialization.cs" />
-     <Compile Include="Assets\scripts\Lock.cs" />
-     <Compile Include="Assets\scripts\NetworkMenu.cs" />
-     <Compile Include="Assets\scripts\Pickup.cs" />
+     <Compile Include="Assets\scripts\BlargID.cs" />
+     <Compile Include="Assets\scripts\ImpactReceiver.cs" />
+     <Compile Include="Assets\scripts\Network\Not currently in use\CustomSerialization.cs" />
+     <Compile Include="Assets\scripts\Network\Not currently in use\NetworkMenu.cs" />
+     <Compile Include="Assets\scripts\Network\Not currently in use\chat.cs" />
+     <Compile Include="Assets\scripts\Network\Using\ClientNetwork.cs" />
+     <Compile Include="Assets\scripts\Network\Using\ServerClientSelect.cs" />
+     <Compile Include="Assets\scripts\Network\Using\ServerNetwork.cs" />
+     <Compile Include="Assets\scripts\cam.cs" />
      <Compile Include="Assets\scripts\move.cs" />
+     <Compile Include="Assets\scripts\non networked scripts\Key.cs" />
+     <Compile Include="Assets\scripts\non networked scripts\Ladder.cs" />
+     <Compile Include="Assets\scripts\non networked scripts\Lock.cs" />
+     <Compile Include="Assets\scripts\non networked scripts\Pickup.cs" />
+     <Compile Include="Assets\scripts\non networked scripts\bomb.cs" />
+     <Compile Include="Assets\scripts\spawner.cs" />
      <None Include="Assets\GameArt\License.txt.txt" />
      <None Include="Assets\etc\3d-platformer-set2\textures\READ ME.txt" />
      <None Include="Assets\GameArt\readme.txt" />
