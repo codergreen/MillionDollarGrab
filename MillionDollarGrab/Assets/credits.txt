@@ -58,3 +58,4 @@ gift box - http://opengameart.org/content/gift-box
 dinner ware - http://opengameart.org/content/dinnerware
 food - http://opengameart.org/content/food-pack-cooking
 food - http://opengameart.org/content/food-pack
+heart - http://opengameart.org/content/heart-1

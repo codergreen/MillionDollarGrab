@@ -7,7 +7,7 @@ public class ClientNetwork : MonoBehaviour {
 	private string _messageLog = "";
 	private string mymessage = "";
 	string someInfo = "";
-	private NetworkPlayer _myNetworkPlayer;
+	public NetworkPlayer _myNetworkPlayer;
 	void OnGUI() {
 		if (Network.peerType == NetworkPeerType.Disconnected) {
 			if (GUI.Button(new Rect(300, 100, 150, 25), "Connect")) {

@@ -12,14 +12,24 @@ public class move : MonoBehaviour {
 	float waitasec;
 	int[] invItemType;
 	int[] invItemAmount;
-	//bool touchLadder = false;
+	public int health = 3;
+	public int maxHealth = 10;
+	public Texture heartTex;
 
 	void Start(){
 		invItemType = new int[80];
 		invItemAmount = new int[80];
+		invItemType [0] = 1;
+		invItemAmount [0] = 0;
 	}
 	public void OnGUI() {
-		GUI.TextArea(new Rect(0, 450, 100, 25), "My coins: "+invItemAmount[0]);
+		if (networkView.isMine) {
+			GUI.TextArea (new Rect (0, 450, 100, 25), "My coins: " + invItemAmount [0]);
+			if (health > maxHealth)
+				health = maxHealth;
+			for (int i=0; i<health; ++i)
+				GUI.DrawTexture (new Rect (300 + i * 60, 0, 60, 60), heartTex, ScaleMode.ScaleToFit, true, 1.0F);
+		}
 	}
 
 	void Update() {
@@ -47,8 +57,7 @@ public class move : MonoBehaviour {
 								return;
 		
 						Lock l = hit.collider.gameObject.GetComponent<Lock> ();
-						Ladder l2 = hit.collider.gameObject.GetComponent<Ladder> ();
-						if (body.isKinematic && l == null && l2 == null)
+						if (body.isKinematic && l == null)
 								return;
 
 						//if (hit.moveDirection.y < -0.3F)
@@ -66,34 +75,12 @@ public class move : MonoBehaviour {
 								}
 								return;
 						}
-						if (l2 != null) {
-								//touchLadder = true;
-								return;
-						}
 
 						Pickup p = hit.collider.gameObject.GetComponent<Pickup> ();
-						if (p != null && p.type != 0) {
-								bool newItem = true;
-								//Add grab and add to inventory
-								for (int invSpot=0; invSpot<80; ++invSpot) {
-										if (invItemType [invSpot] == p.type) {
-												++invItemAmount [invSpot];
-												networkView.RPC ("requestDestroy", RPCMode.All, new object[]{hit.collider.gameObject.GetComponent<BlargID>().myid});
-												newItem = false;
-												break;
-										}
-								}
-								if (newItem == true) {
-										for (int invSpot=0; invSpot<80; ++invSpot) {
-												if (invItemType [invSpot] == 0) {
-														invItemType [invSpot] = p.type;
-														++invItemAmount [invSpot];
-														networkView.RPC ("requestDestroy", RPCMode.All, new object[]{hit.collider.gameObject.GetComponent<BlargID>().myid});
-														newItem = false;
-														break;
-												}
-										}
-								}
+						ClientNetwork cn = Camera.main.gameObject.GetComponent<ClientNetwork> ();
+						BlargID bid = hit.collider.gameObject.GetComponent<BlargID>();
+						if (p != null && p.type != 0&&cn!=null&&bid!=null) {
+							networkView.RPC ("requestDestroyPickup", RPCMode.Server, new object[]{bid.myid, cn._myNetworkPlayer});	
 						}
 
 
@@ -101,13 +88,46 @@ public class move : MonoBehaviour {
 						Vector3 pushDir = new Vector3 (hit.moveDirection.x, 0, hit.moveDirection.z);
 						body.velocity = pushDir * pushPower;
 		}
+	public void ApplyDamage(){
+		--health;
+	}
 	[RPC]
-	void requestDestroy(int myid){
+	void requestDestroyPickup(int myid, NetworkPlayer n){
+		if(Network.isServer)
+			networkView.RPC ("requestDestroyPickup", RPCMode.OthersBuffered, new object[]{myid,n});
 		BlargID[] os = FindObjectsOfType(typeof(BlargID)) as BlargID[];
 		foreach(BlargID o in os){
 			if(o.myid==myid){
 				Destroy(o.gameObject);
+				if(Network.isServer){
+					networkView.RPC ("AddPickup", RPCMode.OthersBuffered, new object[]{o.gameObject.GetComponent<Pickup> ().type, n});
+				}
 				break;
+			}
+		}
+	}
+	[RPC]
+	void AddPickup(int type ,NetworkPlayer n){
+		if (n == Camera.main.gameObject.GetComponent<ClientNetwork>()._myNetworkPlayer) {
+			bool newItem = true;
+			//Add grab and add to inventory
+			for (int invSpot=0; invSpot<80; ++invSpot) {
+				if (invItemType [invSpot] == type) {
+					++invItemAmount [invSpot];
+
+					newItem = false;
+					break;
+				}
+			}
+			if (newItem == true) {
+				for (int invSpot=0; invSpot<80; ++invSpot) {
+					if (invItemType [invSpot] == 0) {
+						invItemType [invSpot] = type;
+						++invItemAmount [invSpot];
+						newItem = false;
+						break;
+					}
+				}
 			}
 		}
 	}

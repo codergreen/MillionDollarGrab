@@ -20,5 +20,8 @@ public class ImpactReceiver : MonoBehaviour {
 	public void AddImpact(Vector3 dir){
 		if (dir.y < 0) dir.y = -dir.y; // reflect down force on the ground
 		impact += dir;
+		if (impact.magnitude > 3.0f) {
+			this.gameObject.SendMessage("ApplyDamage",null,SendMessageOptions.DontRequireReceiver);
+		}
 	}
 }
